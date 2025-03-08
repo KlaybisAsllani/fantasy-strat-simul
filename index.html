@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territory Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+</head>
+<body>
+  <!-- Setup Screen -->
+  <div id="setupScreen">
+    <h1>Game Setup</h1>
+    <label for="playerColor">Choose Player Color:</label>
+    <input type="color" id="playerColor" value="#00ff00"> <!-- Default green -->
+    <br>
+    <label for="turnDuration">Turn Duration (seconds):</label>
+    <input type="number" id="turnDuration" value="60" min="10">
+    <br>
+    <button id="startGame">Start Game</button>
+  </div>
+
+  <!-- Game Canvas -->
+  <div id="gameCanvasContainer" class="hidden">
+    <canvas id="gameCanvas"></canvas>
+    <div id="playerColorIndicator" class="hidden">
+      Player Color: <span id="playerColorDisplay"></span>
+    </div>
+    <div id="turnControls" class="hidden">
+      <button id="endTurn">End Turn</button>
+    </div>
+    <div id="timer" class="hidden">
+      Time Left: <span id="timeLeft"></span>
+    </div>
+  </div>
+
+  <!-- Build Units Menu -->
+  <div id="buildUnitsMenu" class="hidden">
+    <div>
+      <span>Wizard: </span>
+      <button class="unit-count-decrease" data-unit="wizard">-</button>
+      <span class="unit-count" data-unit="wizard">0</span>
+      <button class="unit-count-increase" data-unit="wizard">+</button>
+    </div>
+    <div>
+      <span>Thief: </span>
+      <button class="unit-count-decrease" data-unit="thief">-</button>
+      <span class="unit-count" data-unit="thief">0</span>
+      <button class="unit-count-increase" data-unit="thief">+</button>
+    </div>
+    <div>
+      <span>Archer: </span>
+      <button class="unit-count-decrease" data-unit="archer">-</button>
+      <span class="unit-count" data-unit="archer">0</span>
+      <button class="unit-count-increase" data-unit="archer">+</button>
+    </div>
+    <div>
+      <span>Paladin: </span>
+      <button class="unit-count-decrease" data-unit="paladin">-</button>
+      <span class="unit-count" data-unit="paladin">0</span>
+      <button class="unit-count-increase" data-unit="paladin">+</button>
+    </div>
+    <div>
+      <span>Rogue: </span>
+      <button class="unit-count-decrease" data-unit="rogue">-</button>
+      <span class="unit-count" data-unit="rogue">0</span>
+      <button class="unit-count-increase" data-unit="rogue">+</button>
+    </div>
+    <button id="spawnUnits">Spawn Units</button>
+    <button id="closeBuildMenu">X</button>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="resultScreen" class="hidden">
+    <h2>Game Over</h2>
+    <p id="resultMessage"></p>
+    <button id="restart">Restart</button>
+  </div>
+
+  <!-- Unit Stats Tooltip -->
+  <div id="unitStatsTooltip" class="hidden"></div>
+
+  <!-- Game Script -->
+  <script src="game.js"></script>
+</body>
+</html>

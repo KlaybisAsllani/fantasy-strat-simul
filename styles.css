@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Setup Screen */
+#setupScreen {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#setupScreen h1 {
+  margin-bottom: 20px;
+}
+
+#setupScreen label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#setupScreen input {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+#setupScreen button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#setupScreen button:hover {
+  background-color: #0056b3;
+}
+
+/* Game Canvas Container */
+#gameCanvasContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Canvas */
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+
+/* Player Color Indicator */
+#playerColorIndicator {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+}
+
+#playerColorDisplay {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+
+/* Turn Controls */
+#turnControls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+#turnControls button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#turnControls button:hover {
+  background-color: #218838;
+}
+
+/* Timer */
+#timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+/* Build Units Menu */
+#buildUnitsMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+}
+
+#buildUnitsMenu div {
+  margin-bottom: 10px;
+}
+
+#buildUnitsMenu button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#buildUnitsMenu button:hover {
+  background-color: #0056b3;
+}
+
+#closeBuildMenu {
+  background-color: #dc3545;
+}
+
+#closeBuildMenu:hover {
+  background-color: #c82333;
+}
+
+/* Result Screen */
+#resultScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+}
+
+#resultScreen h2 {
+  margin-bottom: 10px;
+}
+
+#resultScreen button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resultScreen button:hover {
+  background-color: #0056b3;
+}
+
+/* Unit Stats Tooltip */
+#unitStatsTooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 10;
+}
